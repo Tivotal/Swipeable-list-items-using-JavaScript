@@ -1,0 +1,126 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f2f6f9;
+}
+
+.list {
+  width: 480px;
+}
+
+.list .list-item {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.list-item .item-content {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  padding: 16px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.04);
+  z-index: 1;
+}
+
+.list-item .item-content .profile {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.item-content .profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.list-item .caption {
+  width: 75%;
+  display: grid;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+}
+
+.list-item .caption h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: -1px;
+}
+
+.list-item .caption p {
+  font-size: 15px;
+  color: #707070;
+  margin-top: -3px;
+  font-weight: 500;
+}
+
+.list .list-item button {
+  cursor: pointer;
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 15px;
+  transition: all 0.2s ease-out;
+}
+
+.list-item button .icon {
+  width: 100px;
+  font-size: 20px;
+}
+
+.list-item button.share {
+  left: 10px;
+  justify-content: flex-start;
+  color: #010101;
+  background-color: #e7eaed;
+}
+
+.list-item button.delete {
+  right: 10px;
+  justify-content: flex-end;
+  color: #fff;
+  background-color: #ec395c;
+}
+
+@media (min-width: 768px) {
+  .list-item button .icon {
+    width: 65px;
+    font-size: 19px;
+  }
+
+  .list-item:hover button.share {
+    transform: translateX(-70px);
+  }
+
+  .list-item:hover button.delete {
+    transform: translateX(70px);
+  }
+}
